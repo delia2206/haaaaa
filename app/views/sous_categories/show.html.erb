@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @sous_categorie.nom %>
+</p>
+
+<%= link_to 'Edit', edit_sous_category_path(@sous_categorie), class: 'btn btn-default' %> |
+<%= link_to 'Back', sous_categories_path, class: 'btn btn-default' %>

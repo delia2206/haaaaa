@@ -1,0 +1,14 @@
+<%= simple_form_for @role do |f| %>
+  <div class="row">
+    <div class="col-lg-5">
+      
+      <div class="form-group ">
+        
+        <div class="col-lg-8"><%= f.input :nom, label: 'Nom', class:'form-control' %></div>
+      </div>
+      
+    </div>
+  </div>
+
+  <%= f.submit 'Enregistrer', class: 'btn btn-primary' %> 
+<% end  %>

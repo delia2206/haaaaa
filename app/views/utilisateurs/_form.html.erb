@@ -1,0 +1,19 @@
+<%= simple_form_for @utilisateur do |f| %>
+  <div class="row">
+    <div class="col-lg-5">
+      <div class="form-group ">
+          <div class="col-lg-8"><%= f.input :nom, label: 'Nom', class:'form-control' %></div>
+      </div>
+      <div class="form-group ">
+          <div class="col-lg-8"><%= f.input :prenom, label: 'Prénom', class:'form-control' %></div>
+      </div>
+      
+      <div class="form-group ">
+          <div class="col-lg-8"><%= f.association :role, label: 'Role', class:'form-control' %></div>
+      </div>
+      
+    </div>
+  </div>
+
+  <%= f.submit 'Enregistrer', class: 'btn btn-primary' %> 
+<% end  %>
