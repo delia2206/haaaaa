@@ -14,19 +14,19 @@
   <tbody>
     <% @sous_categories.each do |sous_categorie| %>
       <tr>
-        <td><%= sous_categorie.id %></td>
+        <td><%= sous_categorie.nom %></td>
         <td>
         <% if sous_categorie.categorie.nil? %>
             Non défini
           <% else %>
             
-            <%= categorie_id(sous_categorie.categorie.id) %>
+            <%= sous_categorie.categorie.nom %>
             
           <% end %>
         </td>
-        <td><%= link_to 'Show', sous_category, class: 'btn btn-info' %></td>
+        <td><%= link_to 'Show', sous_categorie, class: 'btn btn-info' %></td>
         <td><%= link_to 'Edit', edit_sous_category_path(sous_categorie), class: 'btn btn-info' %></td>
-        <td><%= link_to 'Destroy', sous_category, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-warning' %></td>
+        <td><%= link_to 'Destroy', sous_categorie, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-warning' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,6 +34,6 @@
 
 <br>
 
-<%= link_to 'New Sous categorie', new_sous_category_path %>
+<%= link_to 'New Sous categorie', new_sous_category_path, class: 'btn btn-success' %>
 
 

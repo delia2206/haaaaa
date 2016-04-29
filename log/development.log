@@ -2896,3 +2896,771 @@ Did you mean?  categories_url):
   Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
   Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
   Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (103.1ms)
+
+
+Started GET "/fichiers" for 127.0.0.1 at 2016-04-29 21:08:31 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FichiersController#index as HTML
+  [1m[35mFichier Load (0.3ms)[0m  SELECT "fichiers".* FROM "fichiers"
+  Rendered fichiers/index.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 1081ms (Views: 1033.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/fichiers" for 127.0.0.1 at 2016-04-29 21:19:30 +0200
+Processing by FichiersController#index as HTML
+  [1m[36mFichier Load (0.2ms)[0m  [1mSELECT "fichiers".* FROM "fichiers"[0m
+  [1m[35mUtilisateur Load (1.5ms)[0m  SELECT  "utilisateurs".* FROM "utilisateurs" WHERE "utilisateurs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered fichiers/index.html.erb within layouts/application (76.2ms)
+Completed 200 OK in 168ms (Views: 164.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:19:30 +0200
+
+
+Started GET "/assets/fichiers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:19:30 +0200
+
+
+Started GET "/assets/roles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:19:30 +0200
+
+
+Started GET "/assets/scaffolds.self-7c75d9277aaefe29d65afa468d96b56eeff6c3ffe54e5af6b3d1a16fc4ea92ee.css?body=1" for 127.0.0.1 at 2016-04-29 21:19:30 +0200
+
+
+Started GET "/assets/sous_categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:19:30 +0200
+
+
+Started GET "/assets/utilisateurs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:19:30 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-04-29 21:19:30 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-04-29 21:19:30 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-04-29 21:19:31 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-04-29 21:19:31 +0200
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:19:31 +0200
+
+
+Started GET "/assets/fichiers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:19:31 +0200
+
+
+Started GET "/assets/roles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:19:31 +0200
+
+
+Started GET "/assets/sous_categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:19:31 +0200
+
+
+Started GET "/assets/utilisateurs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:19:31 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-04-29 21:19:31 +0200
+
+
+Started GET "/fichiers" for 127.0.0.1 at 2016-04-29 21:23:23 +0200
+Processing by FichiersController#index as HTML
+  [1m[36mFichier Load (0.2ms)[0m  [1mSELECT "fichiers".* FROM "fichiers"[0m
+  [1m[35mCategorie Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUtilisateur Load (8.0ms)[0m  [1mSELECT  "utilisateurs".* FROM "utilisateurs" WHERE "utilisateurs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered fichiers/index.html.erb within layouts/application (64.2ms)
+Completed 200 OK in 164ms (Views: 149.7ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:23:23 +0200
+
+
+Started GET "/assets/fichiers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:23:23 +0200
+
+
+Started GET "/assets/utilisateurs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:23:23 +0200
+
+
+Started GET "/assets/sous_categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:23:23 +0200
+
+
+Started GET "/assets/scaffolds.self-7c75d9277aaefe29d65afa468d96b56eeff6c3ffe54e5af6b3d1a16fc4ea92ee.css?body=1" for 127.0.0.1 at 2016-04-29 21:23:23 +0200
+
+
+Started GET "/assets/roles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:23:23 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-04-29 21:23:23 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-04-29 21:23:23 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-04-29 21:23:23 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-04-29 21:23:23 +0200
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:23:23 +0200
+
+
+Started GET "/assets/fichiers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:23:23 +0200
+
+
+Started GET "/assets/roles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:23:23 +0200
+
+
+Started GET "/assets/sous_categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:23:23 +0200
+
+
+Started GET "/assets/utilisateurs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:23:23 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-04-29 21:23:23 +0200
+
+
+Started GET "/fichiers" for 127.0.0.1 at 2016-04-29 21:25:53 +0200
+Processing by FichiersController#index as HTML
+  [1m[36mFichier Load (0.4ms)[0m  [1mSELECT "fichiers".* FROM "fichiers"[0m
+  [1m[35mCategorie Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUtilisateur Load (0.1ms)[0m  [1mSELECT  "utilisateurs".* FROM "utilisateurs" WHERE "utilisateurs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered fichiers/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 121ms (Views: 119.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:25:53 +0200
+
+
+Started GET "/assets/fichiers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:25:53 +0200
+
+
+Started GET "/assets/sous_categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:25:53 +0200
+
+
+Started GET "/assets/roles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:25:53 +0200
+
+
+Started GET "/assets/scaffolds.self-7c75d9277aaefe29d65afa468d96b56eeff6c3ffe54e5af6b3d1a16fc4ea92ee.css?body=1" for 127.0.0.1 at 2016-04-29 21:25:53 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-04-29 21:25:53 +0200
+
+
+Started GET "/assets/utilisateurs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:25:53 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-04-29 21:25:53 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-04-29 21:25:53 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-04-29 21:25:53 +0200
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:25:53 +0200
+
+
+Started GET "/assets/fichiers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:25:53 +0200
+
+
+Started GET "/assets/roles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:25:53 +0200
+
+
+Started GET "/assets/sous_categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:25:53 +0200
+
+
+Started GET "/assets/utilisateurs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:25:53 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-04-29 21:25:53 +0200
+
+
+Started GET "/fichiers" for 127.0.0.1 at 2016-04-29 21:34:00 +0200
+Processing by FichiersController#index as HTML
+  [1m[36mFichier Load (0.3ms)[0m  [1mSELECT "fichiers".* FROM "fichiers"[0m
+  [1m[35mCategorie Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUtilisateur Load (0.1ms)[0m  [1mSELECT  "utilisateurs".* FROM "utilisateurs" WHERE "utilisateurs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered fichiers/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 11103ms (Views: 11101.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:34:11 +0200
+
+
+Started GET "/assets/roles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:34:11 +0200
+
+
+Started GET "/assets/fichiers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:34:11 +0200
+
+
+Started GET "/assets/utilisateurs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:34:11 +0200
+
+
+Started GET "/assets/scaffolds.self-7c75d9277aaefe29d65afa468d96b56eeff6c3ffe54e5af6b3d1a16fc4ea92ee.css?body=1" for 127.0.0.1 at 2016-04-29 21:34:11 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-04-29 21:34:11 +0200
+
+
+Started GET "/assets/sous_categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:34:11 +0200
+
+
+Started GET "/assets/application.self-88cb3398771db728c67ec3d1ac34d20af0dbf40f993cab79dc70758da1567282.css?body=1" for 127.0.0.1 at 2016-04-29 21:34:11 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-04-29 21:34:11 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-04-29 21:34:11 +0200
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:34:11 +0200
+
+
+Started GET "/assets/fichiers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:34:11 +0200
+
+
+Started GET "/assets/roles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:34:11 +0200
+
+
+Started GET "/assets/utilisateurs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:34:11 +0200
+
+
+Started GET "/assets/sous_categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:34:11 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-04-29 21:34:11 +0200
+
+
+Started GET "/fichiers" for 127.0.0.1 at 2016-04-29 21:36:04 +0200
+Processing by FichiersController#index as HTML
+  [1m[36mFichier Load (0.2ms)[0m  [1mSELECT "fichiers".* FROM "fichiers"[0m
+  [1m[35mCategorie Load (1.6ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered fichiers/index.html.erb within layouts/application (53.7ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 1.8ms)
+
+ActionView::Template::Error (undefined method `sous_categorie' for #<Fichier:0x007f6fe03611c0>
+Did you mean?  sous_categories
+               sous_categories=
+               sous_categorie_id
+               sous_categorie_id?
+               sous_categorie_id=
+               sous_category_ids):
+    36:           <% end %>
+    37:         </td>
+    38:         <td>
+    39:           <% if fichier.sous_categorie.nil? %>
+    40:             
+    41:           <% else %>
+    42:             
+  app/views/fichiers/index.html.erb:39:in `block in _app_views_fichiers_index_html_erb___2447474460866503122_70059239800120'
+  app/views/fichiers/index.html.erb:17:in `_app_views_fichiers_index_html_erb___2447474460866503122_70059239800120'
+
+
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.0ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (81.2ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.7ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (137.6ms)
+
+
+Started GET "/fichiers" for 127.0.0.1 at 2016-04-29 21:37:02 +0200
+Processing by FichiersController#index as HTML
+  [1m[36mFichier Load (7.4ms)[0m  [1mSELECT "fichiers".* FROM "fichiers"[0m
+  [1m[35mCategorie Load (6.6ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUtilisateur Load (1.3ms)[0m  [1mSELECT  "utilisateurs".* FROM "utilisateurs" WHERE "utilisateurs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered fichiers/index.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 137ms (Views: 120.7ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:37:02 +0200
+
+
+Started GET "/assets/fichiers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:37:02 +0200
+
+
+Started GET "/assets/roles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:37:02 +0200
+
+
+Started GET "/assets/scaffolds.self-7c75d9277aaefe29d65afa468d96b56eeff6c3ffe54e5af6b3d1a16fc4ea92ee.css?body=1" for 127.0.0.1 at 2016-04-29 21:37:02 +0200
+
+
+Started GET "/assets/sous_categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:37:02 +0200
+
+
+Started GET "/assets/utilisateurs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:37:02 +0200
+
+
+Started GET "/assets/application.self-88cb3398771db728c67ec3d1ac34d20af0dbf40f993cab79dc70758da1567282.css?body=1" for 127.0.0.1 at 2016-04-29 21:37:02 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-04-29 21:37:02 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-04-29 21:37:02 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-04-29 21:37:02 +0200
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:37:02 +0200
+
+
+Started GET "/assets/fichiers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:37:02 +0200
+
+
+Started GET "/assets/roles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:37:02 +0200
+
+
+Started GET "/assets/sous_categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:37:02 +0200
+
+
+Started GET "/assets/utilisateurs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:37:02 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-04-29 21:37:02 +0200
+
+
+Started GET "/fichiers/new" for 127.0.0.1 at 2016-04-29 21:37:11 +0200
+Processing by FichiersController#new as HTML
+  [1m[36mCategorie Load (2.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mUtilisateur Load (0.2ms)[0m  SELECT "utilisateurs".* FROM "utilisateurs"
+  Rendered fichiers/_form.html.erb (136.3ms)
+  Rendered fichiers/new.html.erb within layouts/application (138.1ms)
+Completed 200 OK in 258ms (Views: 253.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/fichiers/new" for 127.0.0.1 at 2016-04-29 21:48:25 +0200
+Processing by FichiersController#new as HTML
+  Rendered fichiers/_form.html.erb (9.1ms)
+  Rendered fichiers/new.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Association :categorie_id not found):
+     6:       </div>
+     7:       
+     8:       <div class="form-group ">
+     9:           <div class="col-lg-8"><%= f.association :categorie_id, label: 'Categorie', class:'form-control' %></div>
+    10:       </div>
+    11:       <div class="form-group ">
+    12:           <!--<div class="col-lg-8"><%# f.association :sous_categorie, label: 'Sous-categorie', class:'form-control' #%></div>-->
+  app/views/fichiers/_form.html.erb:9:in `block in _app_views_fichiers__form_html_erb__1593747989023891079_70059048386280'
+  app/views/fichiers/_form.html.erb:1:in `_app_views_fichiers__form_html_erb__1593747989023891079_70059048386280'
+  app/views/fichiers/new.html.erb:3:in `_app_views_fichiers_new_html_erb__4214052520428262846_70059048621240'
+
+
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (29.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.3ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (89.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.2ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.6ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (116.9ms)
+
+
+Started GET "/fichiers/new" for 127.0.0.1 at 2016-04-29 21:48:46 +0200
+Processing by FichiersController#new as HTML
+  [1m[36mCategorie Load (5.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mUtilisateur Load (0.2ms)[0m  SELECT "utilisateurs".* FROM "utilisateurs"
+  Rendered fichiers/_form.html.erb (36.1ms)
+  Rendered fichiers/new.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 183ms (Views: 176.7ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:48:47 +0200
+
+
+Started GET "/assets/fichiers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:48:47 +0200
+
+
+Started GET "/assets/scaffolds.self-7c75d9277aaefe29d65afa468d96b56eeff6c3ffe54e5af6b3d1a16fc4ea92ee.css?body=1" for 127.0.0.1 at 2016-04-29 21:48:47 +0200
+
+
+Started GET "/assets/sous_categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:48:47 +0200
+
+
+Started GET "/assets/utilisateurs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:48:47 +0200
+
+
+Started GET "/assets/roles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:48:47 +0200
+
+
+Started GET "/assets/application.self-88cb3398771db728c67ec3d1ac34d20af0dbf40f993cab79dc70758da1567282.css?body=1" for 127.0.0.1 at 2016-04-29 21:48:47 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-04-29 21:48:47 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-04-29 21:48:47 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-04-29 21:48:47 +0200
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:48:47 +0200
+
+
+Started GET "/assets/fichiers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:48:47 +0200
+
+
+Started GET "/assets/roles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:48:47 +0200
+
+
+Started GET "/assets/sous_categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:48:47 +0200
+
+
+Started GET "/assets/utilisateurs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:48:47 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-04-29 21:48:47 +0200
+
+
+Started POST "/fichiers" for 127.0.0.1 at 2016-04-29 21:49:07 +0200
+Processing by FichiersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c3ZVqW13JywLb93ik/4hOfFK8LSVDc0NWOOzYWRrsPEqnrEEl4RR88lbS3P0Wc9n6s7IMn5YfeQeYL8preXKkg==", "fichier"=>{"nom"=>"test", "categorie_id"=>"1", "utilisateur_id"=>"1"}, "commit"=>"Enregistrer"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "fichiers" ("nom", "categorie_id", "utilisateur_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["nom", "test"], ["categorie_id", 1], ["utilisateur_id", 1], ["created_at", "2016-04-29 19:49:07.168346"], ["updated_at", "2016-04-29 19:49:07.168346"]]
+  [1m[36m (12.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/fichiers/4
+Completed 302 Found in 32ms (ActiveRecord: 15.3ms)
+
+
+Started GET "/fichiers/4" for 127.0.0.1 at 2016-04-29 21:49:07 +0200
+Processing by FichiersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mFichier Load (0.2ms)[0m  SELECT  "fichiers".* FROM "fichiers" WHERE "fichiers"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered fichiers/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 148ms (Views: 134.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fichiers" for 127.0.0.1 at 2016-04-29 21:49:09 +0200
+Processing by FichiersController#index as HTML
+  [1m[36mFichier Load (0.3ms)[0m  [1mSELECT "fichiers".* FROM "fichiers"[0m
+  [1m[35mCategorie Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUtilisateur Load (0.2ms)[0m  [1mSELECT  "utilisateurs".* FROM "utilisateurs" WHERE "utilisateurs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "utilisateurs".* FROM "utilisateurs" WHERE "utilisateurs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered fichiers/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 142ms (Views: 140.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2016-04-29 21:50:47 +0200
+Processing by CategoriesController#index as HTML
+  [1m[36mCategorie Load (1.6ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 154ms (Views: 145.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/sous_categories" for 127.0.0.1 at 2016-04-29 21:51:02 +0200
+Processing by SousCategoriesController#index as HTML
+  [1m[35mSousCategorie Load (0.2ms)[0m  SELECT "sous_categories".* FROM "sous_categories"
+  [1m[36mCategorie Load (2.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sous_categories/index.html.erb within layouts/application (106.5ms)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 3.4ms)
+
+ActionView::Template::Error (undefined method `categorie_id' for #<#<Class:0x007f6fc9ede230>:0x007f6fc9e3de98>
+Did you mean?  categories_url):
+    20:             Non défini
+    21:           <% else %>
+    22:             
+    23:             <%= categorie_id(sous_categorie.categorie.id) %>
+    24:             
+    25:           <% end %>
+    26:         </td>
+  app/views/sous_categories/index.html.erb:23:in `block in _app_views_sous_categories_index_html_erb___2852337731387770491_70059052622920'
+  app/views/sous_categories/index.html.erb:15:in `_app_views_sous_categories_index_html_erb___2852337731387770491_70059052622920'
+
+
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (24.4ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.2ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (87.6ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (8.3ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.8ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (134.8ms)
+
+
+Started GET "/sous_categories" for 127.0.0.1 at 2016-04-29 21:52:14 +0200
+Processing by SousCategoriesController#index as HTML
+  [1m[35mSousCategorie Load (1.1ms)[0m  SELECT "sous_categories".* FROM "sous_categories"
+  [1m[36mCategorie Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sous_categories/index.html.erb within layouts/application (106.8ms)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (undefined local variable or method `sous_category' for #<#<Class:0x007f6fc9ede230>:0x007f6fc92238b0>
+Did you mean?  sous_categorie
+               sous_category_url
+               sous_category_path
+               sous_categories_url
+               sous_categories_path
+               @sous_categories):
+    24:             
+    25:           <% end %>
+    26:         </td>
+    27:         <td><%= link_to 'Show', sous_category, class: 'btn btn-info' %></td>
+    28:         <td><%= link_to 'Edit', edit_sous_category_path(sous_categorie), class: 'btn btn-info' %></td>
+    29:         <td><%= link_to 'Destroy', sous_category, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-warning' %></td>
+    30:       </tr>
+  app/views/sous_categories/index.html.erb:27:in `block in _app_views_sous_categories_index_html_erb___2852337731387770491_70059046277780'
+  app/views/sous_categories/index.html.erb:15:in `_app_views_sous_categories_index_html_erb___2852337731387770491_70059046277780'
+
+
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.2ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.7ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (99.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (7.4ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (176.5ms)
+
+
+Started GET "/sous_categories" for 127.0.0.1 at 2016-04-29 21:52:48 +0200
+Processing by SousCategoriesController#index as HTML
+  [1m[35mSousCategorie Load (0.2ms)[0m  SELECT "sous_categories".* FROM "sous_categories"
+  [1m[36mCategorie Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sous_categories/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 128ms (Views: 126.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:52:48 +0200
+
+
+Started GET "/assets/roles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:52:48 +0200
+
+
+Started GET "/assets/fichiers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:52:48 +0200
+
+
+Started GET "/assets/sous_categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:52:48 +0200
+
+
+Started GET "/assets/scaffolds.self-7c75d9277aaefe29d65afa468d96b56eeff6c3ffe54e5af6b3d1a16fc4ea92ee.css?body=1" for 127.0.0.1 at 2016-04-29 21:52:48 +0200
+
+
+Started GET "/assets/utilisateurs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:52:48 +0200
+
+
+Started GET "/assets/application.self-88cb3398771db728c67ec3d1ac34d20af0dbf40f993cab79dc70758da1567282.css?body=1" for 127.0.0.1 at 2016-04-29 21:52:48 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-04-29 21:52:48 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-04-29 21:52:48 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-04-29 21:52:48 +0200
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:52:48 +0200
+
+
+Started GET "/assets/fichiers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:52:48 +0200
+
+
+Started GET "/assets/roles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:52:48 +0200
+
+
+Started GET "/assets/sous_categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:52:48 +0200
+
+
+Started GET "/assets/utilisateurs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:52:48 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-04-29 21:52:48 +0200
+
+
+Started GET "/sous_categories" for 127.0.0.1 at 2016-04-29 21:53:08 +0200
+Processing by SousCategoriesController#index as HTML
+  [1m[35mSousCategorie Load (3.5ms)[0m  SELECT "sous_categories".* FROM "sous_categories"
+  [1m[36mCategorie Load (2.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sous_categories/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 136ms (Views: 129.2ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:53:08 +0200
+
+
+Started GET "/assets/fichiers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:53:08 +0200
+
+
+Started GET "/assets/utilisateurs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:53:08 +0200
+
+
+Started GET "/assets/roles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:53:08 +0200
+
+
+Started GET "/assets/sous_categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:53:08 +0200
+
+
+Started GET "/assets/scaffolds.self-7c75d9277aaefe29d65afa468d96b56eeff6c3ffe54e5af6b3d1a16fc4ea92ee.css?body=1" for 127.0.0.1 at 2016-04-29 21:53:08 +0200
+
+
+Started GET "/assets/application.self-88cb3398771db728c67ec3d1ac34d20af0dbf40f993cab79dc70758da1567282.css?body=1" for 127.0.0.1 at 2016-04-29 21:53:08 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-04-29 21:53:08 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-04-29 21:53:08 +0200
+
+
+Started GET "/assets/fichiers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:53:08 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-04-29 21:53:08 +0200
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:53:08 +0200
+
+
+Started GET "/assets/sous_categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:53:08 +0200
+
+
+Started GET "/assets/roles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:53:08 +0200
+
+
+Started GET "/assets/utilisateurs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:53:08 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-04-29 21:53:08 +0200
+
+
+Started GET "/sous_categories" for 127.0.0.1 at 2016-04-29 21:58:25 +0200
+Processing by SousCategoriesController#index as HTML
+  [1m[35mSousCategorie Load (0.3ms)[0m  SELECT "sous_categories".* FROM "sous_categories"
+  [1m[36mCategorie Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sous_categories/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 126ms (Views: 125.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:58:25 +0200
+
+
+Started GET "/assets/fichiers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:58:25 +0200
+
+
+Started GET "/assets/utilisateurs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:58:25 +0200
+
+
+Started GET "/assets/sous_categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:58:25 +0200
+
+
+Started GET "/assets/scaffolds.self-7c75d9277aaefe29d65afa468d96b56eeff6c3ffe54e5af6b3d1a16fc4ea92ee.css?body=1" for 127.0.0.1 at 2016-04-29 21:58:25 +0200
+
+
+Started GET "/assets/roles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-29 21:58:25 +0200
+
+
+Started GET "/assets/application.self-88cb3398771db728c67ec3d1ac34d20af0dbf40f993cab79dc70758da1567282.css?body=1" for 127.0.0.1 at 2016-04-29 21:58:25 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-04-29 21:58:25 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-04-29 21:58:25 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-04-29 21:58:25 +0200
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:58:25 +0200
+
+
+Started GET "/assets/fichiers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:58:25 +0200
+
+
+Started GET "/assets/roles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:58:25 +0200
+
+
+Started GET "/assets/sous_categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:58:25 +0200
+
+
+Started GET "/assets/utilisateurs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-29 21:58:25 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-04-29 21:58:25 +0200
+
+
+Started GET "/sous_categories/new" for 127.0.0.1 at 2016-04-29 21:58:54 +0200
+Processing by SousCategoriesController#new as HTML
+  [1m[35mCategorie Load (4.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered sous_categories/_form.html.erb (27.7ms)
+  Rendered sous_categories/new.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 145ms (Views: 139.4ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/sous_categories" for 127.0.0.1 at 2016-04-29 21:59:08 +0200
+Processing by SousCategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XBbpi9TewfD3JcMAIvFfHfYw7b8uvCSD/2KibsiJezcF/g0mLi23LzURVZFFVrFD7bTVOcXplGq54a4mAQcBVA==", "sous_categorie"=>{"nom"=>"Roman", "categorie_id"=>"2"}, "commit"=>"Enregistrer"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "sous_categories" ("nom", "categorie_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["nom", "Roman"], ["categorie_id", 2], ["created_at", "2016-04-29 19:59:08.502457"], ["updated_at", "2016-04-29 19:59:08.502457"]]
+  [1m[36m (13.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/sous_categories/2
+Completed 302 Found in 26ms (ActiveRecord: 14.6ms)
+
+
+Started GET "/sous_categories/2" for 127.0.0.1 at 2016-04-29 21:59:08 +0200
+Processing by SousCategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSousCategorie Load (0.3ms)[0m  SELECT  "sous_categories".* FROM "sous_categories" WHERE "sous_categories"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered sous_categories/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 120ms (Views: 115.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sous_categories" for 127.0.0.1 at 2016-04-29 21:59:10 +0200
+Processing by SousCategoriesController#index as HTML
+  [1m[36mSousCategorie Load (0.2ms)[0m  [1mSELECT "sous_categories".* FROM "sous_categories"[0m
+  [1m[35mCategorie Load (1.5ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCategorie Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered sous_categories/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 113ms (Views: 110.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/fichiers" for 127.0.0.1 at 2016-04-29 21:59:55 +0200
+Processing by FichiersController#index as HTML
+  [1m[35mFichier Load (0.5ms)[0m  SELECT "fichiers".* FROM "fichiers"
+  [1m[36mCategorie Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUtilisateur Load (0.1ms)[0m  SELECT  "utilisateurs".* FROM "utilisateurs" WHERE "utilisateurs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "utilisateurs".* FROM "utilisateurs" WHERE "utilisateurs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered fichiers/index.html.erb within layouts/application (79.7ms)
+Completed 200 OK in 214ms (Views: 193.4ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/fichiers/new" for 127.0.0.1 at 2016-04-29 21:59:58 +0200
+Processing by FichiersController#new as HTML
+  [1m[35mCategorie Load (1.7ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mUtilisateur Load (1.2ms)[0m  [1mSELECT "utilisateurs".* FROM "utilisateurs"[0m
+  Rendered fichiers/_form.html.erb (29.6ms)
+  Rendered fichiers/new.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 125ms (Views: 120.9ms | ActiveRecord: 2.9ms)
