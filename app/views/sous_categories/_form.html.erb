@@ -1,16 +1,13 @@
-<%= simple_form_for @sous_categorie do |f| %>
-  <div class="row">
-    <div class="col-lg-5">
-      <div class="form-group ">
-          <div class="col-lg-8"><%= f.input :nom, label: 'Nom', class:'form-control' %></div>
-      </div>
-      
-      <div class="form-group ">
-          <div class="col-lg-8"><%= f.association :categorie, label: 'Categorie', class:'form-control' %></div>
-      </div>
-      
-    </div>
+<%= simple_form_for(@sous_category) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.association :fichier %>
+    <%= f.association :category %>
   </div>
 
-  <%= f.submit 'Enregistrer', class: 'btn btn-primary' %> 
-<% end  %>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

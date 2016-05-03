@@ -17,8 +17,8 @@ class CategoriesControllerTest < ActionController::TestCase
   end
 
   test "should create category" do
-    assert_difference('Categorie.count') do
-      post :create, category: { nom: @category.nom }
+    assert_difference('Category.count') do
+      post :create, category: { fichier_id: @category.fichier_id, name: @category.name }
     end
 
     assert_redirected_to category_path(assigns(:category))
@@ -35,12 +35,12 @@ class CategoriesControllerTest < ActionController::TestCase
   end
 
   test "should update category" do
-    patch :update, id: @category, category: { nom: @category.nom }
+    patch :update, id: @category, category: { fichier_id: @category.fichier_id, name: @category.name }
     assert_redirected_to category_path(assigns(:category))
   end
 
   test "should destroy category" do
-    assert_difference('Categorie.count', -1) do
+    assert_difference('Category.count', -1) do
       delete :destroy, id: @category
     end
 

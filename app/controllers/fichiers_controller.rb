@@ -70,9 +70,9 @@ class FichiersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def fichier_params
       params.require(:fichier).permit(
-        :nom,
-        :categorie_id,
-        :sous_catgorie_id,
+        :name,
+        :category_id,
+        :sous_category_id,
         :utilisateur_id)
     end
 end

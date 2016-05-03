@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :sous_categories
   resources :categories
+  resources :sous_categories
+  resources :sous_categories
+  resources :sous_categories
+  resources :categories
   resources :fichiers
   resources :utilisateurs
   resources :roles

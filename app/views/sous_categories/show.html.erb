@@ -1,9 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Nom:</strong>
-  <%= @sous_categorie.nom %>
+  <strong>Name:</strong>
+  <%= @sous_category.name %>
 </p>
 
-<%= link_to 'Edit', edit_sous_category_path(@sous_categorie), class: 'btn btn-default' %> |
-<%= link_to 'Back', sous_categories_path, class: 'btn btn-default' %>
+<p>
+  <strong>Fichier:</strong>
+  <%= @sous_category.fichier %>
+</p>
+
+<p>
+  <strong>Categorie:</strong>
+  <%= @sous_category.category %>
+</p>
+
+<%= link_to 'Edit', edit_sous_category_path(@sous_category) %> |
+<%= link_to 'Back', sous_categories_path %>

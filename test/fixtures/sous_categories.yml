@@ -1,7 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nom: MyString
+  name: MyString
+  fichier_id: 
+  categorie_id: 
 
 two:
-  nom: MyString
+  name: MyString
+  fichier_id: 
+  categorie_id: 

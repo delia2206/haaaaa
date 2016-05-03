@@ -11,46 +11,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428200536) do
+ActiveRecord::Schema.define(version: 20160503104449) do
 
   create_table "categories", force: :cascade do |t|
-    t.string   "nom"
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "fichier_sous_categories", force: :cascade do |t|
+    t.integer  "fichier_id"
+    t.integer  "sous_category_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "fichier_sous_categories", ["fichier_id"], name: "index_fichier_sous_categories_on_fichier_id"
+  add_index "fichier_sous_categories", ["sous_category_id"], name: "index_fichier_sous_categories_on_sous_category_id"
+
   create_table "fichiers", force: :cascade do |t|
-    t.string   "nom"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.integer  "Fichier_id"
-    t.integer  "categorie_id"
-    t.integer  "sous_categorie_id"
+    t.string   "name"
+    t.integer  "category_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.integer  "utilisateur_id"
   end
 
-  add_index "fichiers", ["Fichier_id"], name: "index_fichiers_on_Fichier_id"
-  add_index "fichiers", ["categorie_id"], name: "index_fichiers_on_categorie_id"
-  add_index "fichiers", ["sous_categorie_id"], name: "index_fichiers_on_sous_categorie_id"
+  add_index "fichiers", ["category_id"], name: "index_fichiers_on_category_id"
   add_index "fichiers", ["utilisateur_id"], name: "index_fichiers_on_utilisateur_id"
 
   create_table "roles", force: :cascade do |t|
-    t.string   "nom"
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "sous_categories", force: :cascade do |t|
-    t.string   "nom"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.integer  "categorie_id"
+    t.string   "name"
+    t.integer  "fichier_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  add_index "sous_categories", ["categorie_id"], name: "index_sous_categories_on_categorie_id"
+  add_index "sous_categories", ["category_id"], name: "index_sous_categories_on_category_id"
+  add_index "sous_categories", ["fichier_id"], name: "index_sous_categories_on_fichier_id"
 
   create_table "utilisateurs", force: :cascade do |t|
-    t.string   "nom"
+    t.string   "name"
     t.string   "prenom"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

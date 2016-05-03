@@ -1,10 +1,10 @@
 class SousCategoriesController < ApplicationController
-  before_action :set_sous_categorie, only: [:show, :edit, :update, :destroy]
+  before_action :set_sous_category, only: [:show, :edit, :update, :destroy]
 
   # GET /sous_categories
   # GET /sous_categories.json
   def index
-    @sous_categories = SousCategorie.all
+    @sous_categories = SousCategory.all
   end
 
   # GET /sous_categories/1
@@ -14,7 +14,7 @@ class SousCategoriesController < ApplicationController
 
   # GET /sous_categories/new
   def new
-    @sous_categorie = SousCategorie.new
+    @sous_category = SousCategory.new
   end
 
   # GET /sous_categories/1/edit
@@ -24,15 +24,15 @@ class SousCategoriesController < ApplicationController
   # POST /sous_categories
   # POST /sous_categories.json
   def create
-    @sous_categorie = SousCategorie.new(sous_categorie_params)
+    @sous_category = SousCategory.new(sous_category_params)
 
     respond_to do |format|
-      if @sous_categorie.save
-        format.html { redirect_to @sous_categorie, notice: 'Sous categorie was successfully created.' }
-        format.json { render :show, status: :created, location: @sous_categorie }
+      if @sous_category.save
+        format.html { redirect_to @sous_category, notice: 'Sous category was successfully created.' }
+        format.json { render :show, status: :created, location: @sous_category }
       else
         format.html { render :new }
-        format.json { render json: @sous_categorie.errors, status: :unprocessable_entity }
+        format.json { render json: @sous_category.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -41,12 +41,12 @@ class SousCategoriesController < ApplicationController
   # PATCH/PUT /sous_categories/1.json
   def update
     respond_to do |format|
-      if @sous_categorie.update(sous_categorie_params)
-        format.html { redirect_to @sous_categorie, notice: 'Sous categorie was successfully updated.' }
-        format.json { render :show, status: :ok, location: @sous_categorie }
+      if @sous_category.update(sous_category_params)
+        format.html { redirect_to @sous_category, notice: 'Sous category was successfully updated.' }
+        format.json { render :show, status: :ok, location: @sous_category }
       else
         format.html { render :edit }
-        format.json { render json: @sous_categorie.errors, status: :unprocessable_entity }
+        format.json { render json: @sous_category.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -54,23 +54,21 @@ class SousCategoriesController < ApplicationController
   # DELETE /sous_categories/1
   # DELETE /sous_categories/1.json
   def destroy
-    @sous_categorie.destroy
+    @sous_category.destroy
     respond_to do |format|
-      format.html { redirect_to sous_categories_url, notice: 'Sous categorie was successfully destroyed.' }
+      format.html { redirect_to sous_categories_url, notice: 'Sous category was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_sous_categorie
-      @sous_categorie = SousCategorie.find(params[:id])
+    def set_sous_category
+      @sous_category = SousCategory.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def sous_categorie_params
-      params.require(:sous_categorie).permit(
-        :nom,
-        :categorie_id)
+    def sous_category_params
+      params.require(:sous_category).permit(:name, :fichier_id, :categorie_id)
     end
 end

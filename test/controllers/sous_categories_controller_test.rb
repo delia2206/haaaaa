@@ -17,8 +17,8 @@ class SousCategoriesControllerTest < ActionController::TestCase
   end
 
   test "should create sous_category" do
-    assert_difference('SousCategorie.count') do
-      post :create, sous_category: { nom: @sous_category.nom }
+    assert_difference('SousCategory.count') do
+      post :create, sous_category: { categorie_id: @sous_category.categorie_id, fichier_id: @sous_category.fichier_id, name: @sous_category.name }
     end
 
     assert_redirected_to sous_category_path(assigns(:sous_category))
@@ -35,12 +35,12 @@ class SousCategoriesControllerTest < ActionController::TestCase
   end
 
   test "should update sous_category" do
-    patch :update, id: @sous_category, sous_category: { nom: @sous_category.nom }
+    patch :update, id: @sous_category, sous_category: { categorie_id: @sous_category.categorie_id, fichier_id: @sous_category.fichier_id, name: @sous_category.name }
     assert_redirected_to sous_category_path(assigns(:sous_category))
   end
 
   test "should destroy sous_category" do
-    assert_difference('SousCategorie.count', -1) do
+    assert_difference('SousCategory.count', -1) do
       delete :destroy, id: @sous_category
     end
 
