@@ -1,28 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Sous Categories</h1>
+<% if @sous_categories.any? %>
+  <h1>Listing Sous Categories</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Categorie</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @sous_categories.each do |sous_category| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= sous_category.name %></td>
-        <td><%= sous_category.category %></td>
-        <td><%= link_to 'Show', sous_category %></td>
-        <td><%= link_to 'Edit', edit_sous_category_path(sous_category) %></td>
-        <td><%= link_to 'Destroy', sous_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Categorie</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @sous_categories.each do |sous_category| %>
+        <tr>
+          <td><%= sous_category.name %></td>
+          <td><%= sous_category.category %></td>
+          <td><%= link_to 'Show', sous_category %></td>
+          <td><%= link_to 'Edit', edit_sous_category_path(sous_category) %></td>
+          <td><%= link_to 'Destroy', sous_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>Vous n'avez aucune Sous-Categories !</p>
+<% end %>
 
 <br>
 

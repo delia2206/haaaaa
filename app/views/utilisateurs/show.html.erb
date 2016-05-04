@@ -10,5 +10,10 @@
   <%= @utilisateur.firstName %>
 </p>
 
+<p>
+  <strong>Role:</strong>
+  <%= @utilisateur.role.name %>
+</p>
+
 <%= link_to 'Edit', edit_utilisateur_path(@utilisateur) %> |
 <%= link_to 'Back', utilisateurs_path %>

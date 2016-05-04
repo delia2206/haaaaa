@@ -1,56 +1,60 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Fichiers</h1>
+<% if @fichiers.any? %>
+  <h1>Listing Fichiers</h1>
 
-<table class="table table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>Nom</th>
-      <th>Utilisateur</th>
-      <th>Catégorie</th>
-      <!--<th>Sous catégorie</th>-->
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @fichiers.each do |fichier| %>
+  <table class="table table-striped table-condensed">
+    <thead>
       <tr>
-        <td><%= fichier.name %></td>
-        <td>
-          <% if fichier.utilisateur.nil? %>
-            
-          <% else %>
-            
-            <%= fichier.utilisateur.name %>
-            
-          <% end %>
-        </td>
-        <td>
-          <% if fichier.category.nil? %>
-            
-          <% else %>
-            
-            <%= fichier.category.name %>
-            
-          <% end %>
-        </td>
-        <!--<td>
-          <# if fichier.sous_categorie.nil? #>
-            
-          <# else #>
-            
-            <#= fichier.sous_categorie.nom #>
-            
-          <# end #>
-        </td>-->
-        <td><%= link_to 'Show', fichier %></td>
-        <td><%= link_to 'Edit', edit_fichier_path(fichier), class: 'btn btn-info' %></td>
-        <td><%= link_to 'Destroy', fichier, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-warning' %></td>
+        <th>Nom</th>
+        <th>Utilisateur</th>
+        <th>Catégorie</th>
+        <!--<th>Sous catégorie</th>-->
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @fichiers.each do |fichier| %>
+        <tr>
+          <td><%= fichier.name %></td>
+          <td>
+            <% if fichier.utilisateur.nil? %>
+              
+            <% else %>
+              
+              <%= fichier.utilisateur.firstName %>
+              
+            <% end %>
+          </td>
+          <td>
+            <% if fichier.category.nil? %>
+              
+            <% else %>
+              
+              <%= fichier.category.name %>
+              
+            <% end %>
+          </td>
+          <!--<td>
+            <# if fichier.sous_categorie.nil? #>
+              
+            <# else #>
+              
+              <#= fichier.sous_categorie.nom #>
+              
+            <# end #>
+          </td>-->
+          <td><%= link_to 'Show', fichier %></td>
+          <td><%= link_to 'Edit', edit_fichier_path(fichier), class: 'btn btn-info' %></td>
+          <td><%= link_to 'Destroy', fichier, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-warning' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>Vous n'avez aucun fichier !</p>
+<% end %>
 
 <br>
 
