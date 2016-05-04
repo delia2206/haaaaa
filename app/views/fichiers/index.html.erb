@@ -16,13 +16,13 @@
   <tbody>
     <% @fichiers.each do |fichier| %>
       <tr>
-        <td><%= fichier.nom %></td>
+        <td><%= fichier.name %></td>
         <td>
           <% if fichier.utilisateur.nil? %>
             
           <% else %>
             
-            <%= fichier.utilisateur.nom %>
+            <%= fichier.utilisateur.name %>
             
           <% end %>
         </td>

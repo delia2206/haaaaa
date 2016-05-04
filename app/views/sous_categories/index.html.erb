@@ -6,7 +6,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Fichier</th>
       <th>Categorie</th>
       <th colspan="3"></th>
     </tr>
@@ -16,8 +15,7 @@
     <% @sous_categories.each do |sous_category| %>
       <tr>
         <td><%= sous_category.name %></td>
-        <td><%= sous_category.fichier %></td>
-        <td><%= sous_category.categorie %></td>
+        <td><%= sous_category.category %></td>
         <td><%= link_to 'Show', sous_category %></td>
         <td><%= link_to 'Edit', edit_sous_category_path(sous_category) %></td>
         <td><%= link_to 'Destroy', sous_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
