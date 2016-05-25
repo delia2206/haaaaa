@@ -1,0 +1,9 @@
+<% if sous_categories.any? %>
+	<%= sous_categories.map { |s| link_to(s.name, s) }		
+		.join(',')
+		.html_safe %>
+<% else %>
+	
+	&Oslash 
+	
+<% end %>
