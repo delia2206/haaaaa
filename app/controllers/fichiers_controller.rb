@@ -72,7 +72,7 @@ class FichiersController < ApplicationController
       params.require(:fichier).permit(
         :name,
         :category_id,
-        :sous_category_id,
+        :sous_category_ids,
         :user)
     end
 end

@@ -36,12 +36,12 @@
               
             <% end %>
           </td>
-          >td>
-            <% if fichier.sous_category.nil? %>
+          <td>
+            <% if fichier.sous_category_ids.nil? %>
               
             <% else %>
               
-              <%= fichier.sous_category.name %>
+              <%= fichier.sous_category_ids %>
               
             <% end %>
           </td>
