@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Nom:</strong>
+  <strong>t('lastname') :</strong>
   <%= @fichier.name %>
 </p>
 
-<%= link_to 'Edit', edit_fichier_path(@fichier) %> |
-<%= link_to 'Back', fichiers_path %>
+<%= link_to t('edit'), edit_fichier_path(@fichier) %> |
+<%= link_to t('back'), fichiers_path %>

@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <% if @sous_categories.any? %>
-  <h1>Listing Sous Categories</h1>
+  <h1>t('subCategoriesList')</h1>
 
   <table>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Categorie</th>
+        <th><%= t('lastname') %></th>
+        <th><%= t('category') %></th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -17,9 +17,9 @@
         <tr>
           <td><%= sous_category.name %></td>
           <td><%= sous_category.category %></td>
-          <td><%= link_to 'Show', sous_category %></td>
-          <td><%= link_to 'Edit', edit_sous_category_path(sous_category) %></td>
-          <td><%= link_to 'Destroy', sous_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to t('show'), sous_category %></td>
+          <td><%= link_to t('edit'), edit_sous_category_path(sous_category) %></td>
+          <td><%= link_to t('destroy'), sous_category, method: :delete, data: { confirm: t('areYouSure') } %></td>
         </tr>
       <% end %>
     </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Sous category', new_sous_category_path %>
+<%= link_to t('newSubcategory'), new_sous_category_path, class: 'btn btn-success' %>
