@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <% if @utilisateurs.any? %>
-  <h1>Listing Utilisateurs</h1>
+  <h1><%= t('usersList') %></h1>
 
   <table class="table table-striped table-condensed">
     <thead>
       <tr>
-        <th>Nom</th>
-        <th>Prenom</th>
-        <th>Role</th>
+        <th><%= t('lastname') %></th>
+        <th><%= t('firstanme') %></th>
+        <th><%= t('role') %></th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -19,17 +19,17 @@
           <td><%= utilisateur.name %></td>
           <td><%= utilisateur.firstName %></td>
           <td><%= utilisateur.role.name %></td>
-          <td><%= link_to 'Show', utilisateur %></td>
-          <td><%= link_to 'Edit', edit_utilisateur_path(utilisateur), class: 'btn btn-info' %></td>
-          <td><%= link_to 'Destroy', utilisateur, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-warning' %></td>
+          <td><%= link_to t('show'), utilisateur %></td>
+          <td><%= link_to t('edit'), edit_utilisateur_path(utilisateur), class: 'btn btn-info' %></td>
+          <td><%= link_to t('destroy'), utilisateur, method: :delete, data: { confirm: t('areYouSure') }, class: 'btn btn-warning' %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
 <% else %>
-  <p>Vous n'avez aucun Utilisateurs !</p>
+  <p><%= t('youHaveNoUsers') %></p>
 <% end %>
 
 <br>
 
-<%= link_to 'New Utilisateur', new_utilisateur_path, class: 'btn btn-success' %>
+<%= link_to t('newUser'), new_utilisateur_path, class: 'btn btn-success' %>

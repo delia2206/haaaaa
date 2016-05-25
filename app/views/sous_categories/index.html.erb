@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <% if @sous_categories.any? %>
-  <h1>t('subCategoriesList')</h1>
+  <h1><%= t('subCategoriesList') %></h1>
 
   <table>
     <thead>
@@ -25,7 +25,7 @@
     </tbody>
   </table>
 <% else %>
-  <p>Vous n'avez aucune Sous-Categories !</p>
+  <p><%= t('youHaveNoSubCategories') %></p>
 <% end %>
 
 <br>

@@ -4,11 +4,11 @@
       
       <div class="form-group ">
         
-        <div class="col-lg-8"><%= f.input :name, label: 'Nom', class:'form-control' %></div>
+        <div class="col-lg-8"><%= f.input :name, label: t('lastname'), class:'form-control' %></div>
       </div>
       
     </div>
   </div>
 
-  <%= f.submit 'Enregistrer', class: 'btn btn-primary' %> 
+  <%= f.submit t('save'), class: 'btn btn-primary' %> 
 <% end  %>

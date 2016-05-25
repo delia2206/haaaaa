@@ -1,6 +1,6 @@
-<h1>t('editFile')</h1>
+<h1><%= t('editFile') %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @fichier %> |
-<%= link_to 'Back', fichiers_path %>
+<%= link_to t('show'), @fichier %> |
+<%= link_to t('back'), fichiers_path %>
