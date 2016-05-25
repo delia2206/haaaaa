@@ -73,6 +73,6 @@ class FichiersController < ApplicationController
         :name,
         :category_id,
         :sous_category_id,
-        :utilisateur_id)
+        :user)
     end
 end

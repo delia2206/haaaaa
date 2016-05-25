@@ -69,6 +69,6 @@ class SousCategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sous_category_params
-      params.require(:sous_category).permit(:name, :fichier_id, :categorie_id)
+      params.require(:sous_category).permit(:name, :fichier_id, :category_id)
     end
 end

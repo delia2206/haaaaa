@@ -52,6 +52,11 @@ group :development do
   #pagination + bootst
   gem 'will_paginate'
   gem 'will_paginate-bootstrap'
+  #Devise
+  gem 'devise'
+  #Gestion des roles
+  gem 'cancancan'
+  gem 'rolify'
 
 end
 
