@@ -4,7 +4,7 @@ class FichiersController < ApplicationController
   # GET /fichiers
   # GET /fichiers.json
   def index
-    @fichiers = Fichier.all
+    @fichiers = Fichier.paginate(page: params[:page], per_page:5)
   end
 
   # GET /fichiers/1

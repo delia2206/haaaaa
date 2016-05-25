@@ -50,3 +50,8 @@ en:
   user: "User"
   usersList: "Users list"
   yourFilesManager: "Your files manager"
+  youHaveNoCategories: "You have no categories!"
+  youHaveNoFiles: "You have no files!"
+  youHaveNoRoles: "You have no roles!"
+  youHaveNoSubCategories: "You have no sub-categories!"
+  youHaveNoUsers: "You have no users!"

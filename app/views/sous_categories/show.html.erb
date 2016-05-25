@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong><%= t('lastname')%> :</strong>
+  <strong><%= t('lastname') %> :</strong>
   <%= @sous_category.name %>
 </p>
 
 
 <p>
   <strong><%= t('category') %> :</strong>
-  <%= @sous_category.category.name %>
+
+  <%= @sous_category.category %>
 </p>
 
 <%= link_to t('edit'), edit_sous_category_path(@sous_category) %> |

@@ -50,3 +50,8 @@ fr:
   user: "Utilisateur"
   usersList: "Liste des utilisateurs"
   yourFilesManager: "Votre gestionnaire de fichiers"
+  youHaveNoCategories: "Vous n'avez aucune Categories !"
+  youHaveNoFiles: "Vous n'avez aucun fichier !"
+  youHaveNoRoles: "Vous n'avez aucun roles !"
+  youHaveNoSubCategories: "Vous n'avez aucune Sous-Categories !"
+  youHaveNoUsers: "Vous n'avez aucun Utilisateurs !"
