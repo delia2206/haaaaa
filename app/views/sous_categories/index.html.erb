@@ -18,8 +18,8 @@
           <td><%= sous_category.name %></td>
           <td><%= sous_category.category.name %></td>
           <td><%= link_to t('show'), sous_category, class: 'btn btn-info' %></td>
-          <td><%= link_to t('edit'), edit_sous_category_path(sous_category), class: 'btn btn-info' %></td>
-          <td><%= link_to t('destroy'), sous_category, method: :delete, data: { confirm: t('areYouSure') }, class: 'btn btn-warning' %></td>
+          <td><% if user_signed_in? %><%= link_to t('edit'), edit_sous_category_path(sous_category), class: 'btn btn-info' %><% end %></td>
+          <td><% if user_signed_in? %><%= link_to t('destroy'), sous_category, method: :delete, data: { confirm: t('areYouSure') }, class: 'btn btn-warning' %><% end %></td>
         </tr>
       <% end %>
     </tbody>
