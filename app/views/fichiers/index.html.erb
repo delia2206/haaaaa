@@ -37,7 +37,7 @@
             <% end %>
           </td>
           <td><%= render partial: 'sous_categories/sous_categories_list', locals: { sous_categories: fichier.sous_categories} %></td>
-          <td><%= link_to t('show'), fichier %></td>
+          <td><%= link_to t('show'), fichier, class: 'btn btn-info' %></td>
           <td><%= link_to t('edit'), edit_fichier_path(fichier), class: 'btn btn-info' %></td>
           <td><%= link_to t('destroy'), fichier, method: :delete, data: { confirm: t('areYouSure') }, class: 'btn btn-warning' %></td>
         </tr>

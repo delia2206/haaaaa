@@ -15,9 +15,9 @@
       <% @categories.each do |category| %>
         <tr>
           <td><%= category.name %></td>
-          <td><%= link_to t('show'), category %></td>
-          <td><%= link_to t('edit'), edit_category_path(category) %></td>
-          <td><%= link_to t('destroy'), category, method: :delete, data: { confirm: t('areYouSure') } %></td>
+          <td><%= link_to t('show'), category, class: 'btn btn-info' %></td>
+          <td><%= link_to t('edit'), edit_category_path(category), class: 'btn btn-info' %></td>
+          <td><%= link_to t('destroy'), category, method: :delete, data: { confirm: t('areYouSure') }, class: 'btn btn-warning' %></td>
         </tr>
       <% end %>
     </tbody>

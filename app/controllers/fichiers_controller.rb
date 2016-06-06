@@ -24,7 +24,8 @@ class FichiersController < ApplicationController
   # POST /fichiers
   # POST /fichiers.json
   def create
-    @fichier = Fichier.new(fichier_params)
+    #@fichier = Fichier.new(fichier_params)
+    @fichier = current_user.fichiers.build(fichier_params)
 
     respond_to do |format|
       if @fichier.save
@@ -72,7 +73,7 @@ class FichiersController < ApplicationController
       params.require(:fichier).permit(
         :name,
         :category_id,
-        :sous_category_ids,
-        :user)
+        sous_category_ids: []
+        )
     end
 end

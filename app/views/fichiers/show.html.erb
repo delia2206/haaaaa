@@ -3,6 +3,8 @@
 <p>
   <strong><%= t('lastname') %> :</strong>
   <%= @fichier.name %>
+  <%= @fichier.category.name %>
+  <%= render partial: 'sous_categories/sous_categories_list', locals: { sous_categories: @fichier.sous_categories} %>
 </p>
 
 <%= link_to t('edit'), edit_fichier_path(@fichier) %> |
