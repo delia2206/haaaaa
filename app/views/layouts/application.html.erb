@@ -6,33 +6,67 @@
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Haaaaa - Votre gestionnaire de fichiers</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'haaa.css', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
-<header>
-	<p>
-		<% if user_signed_in? %>
-			Connecté en tant que <%= current_user.email %> 
-			<%= link_to 'Editer mon compte', edit_user_registration_path %><span> &nbsp  </span>
-			<%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %>
-		<% else %>
-			<%= link_to 'Se connecter', new_user_session_path%>
-		<% end %>
 
-	</p>
-	<p>
-		<!--<%= link_to 'Liste des Roles', roles_path, class: 'btn btn-default'  %> -->
-		<!--<%= link_to 'Liste des Utilisateurs', utilisateurs_path, class: 'btn btn-default'  %>-->
-		<%= link_to 'Liste des Categories', categories_path, class: 'btn btn-default'  %>
-		<%= link_to 'Liste des Sous-Categories', sous_categories_path, class: 'btn btn-default'  %>
-		<%= link_to 'Liste des Fichiers', fichiers_path, class: 'btn btn-default'  %>
-	</p>
-</header>
+	<nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 logo">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Haaaaaaa</a>
+                </div>
+            </div>
+            <div class="col-sm-9 col-md-10 menu">
+                <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav navbar-right">
+					<% if user_signed_in? %>
+						Connecté en tant que <%= current_user.email %> 
+						<li><%= link_to 'Editer mon compte', edit_user_registration_path %><span> &nbsp  </span></li>
+						<li><%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %></li>
+					<% else %>
+						<li><%= link_to 'Se connecter', new_user_session_path%></li>
+					<% end %>
+                  </ul>
+                </div>
+            </div>
+        </div>
+      </div>
+    </nav>
 
-<%= yield %>
-</div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+              <ul class="nav nav-sidebar">
+				<li><!--<%= link_to 'Liste des Roles', roles_path, class: ''  %> --></li>
+				<li><!--<%= link_to 'Liste des Utilisateurs', utilisateurs_path, class: ''  %>--></li>
+				<li><%= link_to 'Liste des Categories', categories_path, class: ''  %></li>
+				<li><%= link_to 'Liste des Sous-Categories', sous_categories_path, class: ''  %></li>
+				<li><%= link_to 'Liste des Fichiers', fichiers_path, class: ''  %></li>
+              </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="overflow-y: auto;">
+                <h2 class="page-header">Contenu</h2>
+                <div class="container-fluid">
+
+                    <!-- C'est ici qu'on met le yield -->
+                    <div class="row">
+						<%= yield %>
+                    </div>
+                    <!-- Fin du yield -->
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
