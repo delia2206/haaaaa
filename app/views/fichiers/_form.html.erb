@@ -4,6 +4,10 @@
       <div class="form-group ">
           <div class="col-lg-8"><%= f.input :name, label: t('lastname'), class:'form-control' %></div>
       </div>
+      <div class="form-group ">
+        
+        <div class="col-lg-8"><%= f.input :file, as: :file %></div>
+      </div>
       
       <div class="form-group ">
           <div class="col-lg-8"><%= f.association :category, label: t('category'), class:'form-control' %></div>

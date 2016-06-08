@@ -57,6 +57,8 @@ group :development do
   #Gestion des roles
   gem 'cancancan'
   gem 'rolify'
+  #Gestion fichiers
+  gem 'paperclip'
 
 end
 

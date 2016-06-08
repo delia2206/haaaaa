@@ -72,6 +72,7 @@ class FichiersController < ApplicationController
     def fichier_params
       params.require(:fichier).permit(
         :name,
+        :file,
         :category_id,
         sous_category_ids: []
         )
