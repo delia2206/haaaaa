@@ -7,6 +7,7 @@
     <thead>
       <tr>
         <th><%= t('lastname') %></th>
+        <th><%= t('file') %></th>
         <th><%= t('user') %></th>
         <th><%= t('category') %></th>
         <th>Sous catégorie</th>
@@ -18,6 +19,24 @@
       <% @fichiers.each do |fichier| %>
         <tr>
           <td><%= fichier.name %></td>
+          <td><% if fichier.file.exists? %>
+              <% if fichier.file.url.include? ".pdf" %>
+                  <%= link_to image_tag("icons/pdf.png"), fichier.file.url(:original, false) %>
+              <% elsif fichier.file.url.include? ".mp3" %>
+                  <%= link_to image_tag("icons/mp3.png"), fichier.file.url(:original, false) %>
+              <% elsif fichier.file.url.include? ".mp4" %>
+                  <%= link_to image_tag("icons/mp4.png"), fichier.file.url(:original, false) %>
+              <% elsif fichier.file.url.include? ".doc" %>
+                  <%= link_to image_tag("icons/doc.png"), fichier.file.url(:original, false) %>
+              <% else %>
+                  <%= link_to image_tag("icons/genericBlue.png"), fichier.file.url(:original, false) %>
+              <% end %>
+
+            <% else %>
+              &Oslash
+            <% end %>
+         
+          </td>
           <td>
             <% if fichier.user.nil? %>
               
