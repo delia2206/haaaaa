@@ -7,21 +7,7 @@ class Fichier < ActiveRecord::Base
 	has_attached_file :file,
                     styles: lambda { |a| a.instance.check_file_type}
 
-    FileIcon = {
 
-	:pdf => '/images/icons/pdf.png',
-	:doc => '/images/icons/doc.png',
-	:mp3 => '/images/icons/mp3.png',
-	:mp4 => '/images/icons/mp4.png'
-
-	}
-
-	#validates_attachment_content_type :file, content_type: /\Aimage/	
-	#validates_attachment_file_name :file, matches: [/png\Z/, /jpe?g\Z/, /gif\Z/]
-	#validates_with AttachmentSizeValidator,
-	#	attributes: :file,
-	#	less_than: 1.megabytes
-	#do_not_validate_attachment_file_type :file
 	def check_file_type
 	    if is_image_type?
 	      {:small => "x200>", :medium => "x300>", :large => "x400>"}
@@ -45,6 +31,9 @@ class Fichier < ActiveRecord::Base
 	end
 
 	validates_attachment_content_type :file, :content_type => [/\Aimage\/.*\Z/, /\Avideo\/.*\Z/, /\Aaudio\/.*\Z/, /\Aapplication\/.*\Z/]
-
+	validates_attachment_file_name :file, matches: [/png\Z/, /jpe?g\Z/, /gif\Z/, /docx?\Z/, /pdf\Z/, /mp3\Z/, /mp4\Z/, /ppt\Z/]
+	validates_with AttachmentSizeValidator,
+		attributes: :file,
+		less_than: 3.megabytes
 
 end

@@ -24,6 +24,8 @@
                   <%= link_to image_tag("icons/pdf.png"), fichier.file.url(:original, false) %>
               <% elsif fichier.file.url.include? ".mp3" %>
                   <%= link_to image_tag("icons/mp3.png"), fichier.file.url(:original, false) %>
+              <% elsif fichier.file.url.include? ".ppt" %>
+                  <%= link_to image_tag("icons/ppt.png"), fichier.file.url(:original, false) %>
               <% elsif fichier.file.url.include? ".mp4" %>
                   <%= link_to image_tag("icons/mp4.png"), fichier.file.url(:original, false) %>
               <% elsif fichier.file.url.include? ".doc" %>

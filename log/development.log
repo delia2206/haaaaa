@@ -24499,3 +24499,316 @@ Started GET "/assets/utilisateurs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-06-28 21:35:32 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-29 08:26:58 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FichiersController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "fichiers"
+  [1m[36mFichier Load (0.3ms)[0m  [1mSELECT  "fichiers".* FROM "fichiers" LIMIT 5 OFFSET 0[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSousCategory Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ? LIMIT 1[0m  [["fichier_id", 1]]
+  [1m[35mSousCategory Load (0.2ms)[0m  SELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?  [["fichier_id", 1]]
+  Rendered sous_categories/_sous_categories_list.html.erb (47.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSousCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ? LIMIT 1[0m  [["fichier_id", 2]]
+  [1m[35mSousCategory Load (5.9ms)[0m  SELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?  [["fichier_id", 2]]
+  Rendered sous_categories/_sous_categories_list.html.erb (12.2ms)
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSousCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ? LIMIT 1[0m  [["fichier_id", 5]]
+  [1m[35mSousCategory Load (0.6ms)[0m  SELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?  [["fichier_id", 5]]
+  Rendered sous_categories/_sous_categories_list.html.erb (14.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSousCategory Exists (3.0ms)[0m  [1mSELECT  1 AS one FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ? LIMIT 1[0m  [["fichier_id", 6]]
+  [1m[35mSousCategory Load (0.1ms)[0m  SELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?  [["fichier_id", 6]]
+  Rendered sous_categories/_sous_categories_list.html.erb (7.7ms)
+  Rendered fichiers/index.html.erb within layouts/application (948.5ms)
+Completed 200 OK in 1402ms (Views: 1301.4ms | ActiveRecord: 32.3ms)
+
+
+Started GET "/fichiers/new" for 127.0.0.1 at 2016-06-29 08:27:09 +0200
+Processing by FichiersController#new as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mSousCategory Load (0.2ms)[0m  SELECT "sous_categories".* FROM "sous_categories"
+  Rendered fichiers/_form.html.erb (165.6ms)
+  Rendered fichiers/new.html.erb within layouts/application (171.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 261ms (Views: 259.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/fichiers" for 127.0.0.1 at 2016-06-29 08:27:42 +0200
+Processing by FichiersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2nMog/e/fP36eXo0anhVtgdyzVR/7gKZw4Zgswi/TtPBYrMtp1zpcBK74H0L86BzTOEQCQlV4N9qyj1cJmUg1Q==", "fichier"=>{"name"=>"test", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f1a641db778 @tempfile=#<Tempfile:/tmp/RackMultipart20160629-2512-pkbwrp.pdf>, @original_filename="Textbook-of-Digital-Photography-samples.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"fichier[file]\"; filename=\"Textbook-of-Digital-Photography-samples.pdf\"\r\nContent-Type: application/pdf\r\n">, "category_id"=>"2", "sous_category_ids"=>["", "2"]}, "commit"=>"Sauvegarder"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Command :: file -b --mime '/tmp/f71818613ebf673d036b8dbe9583d11320160629-2512-y692fq.pdf'
+  [1m[36mSousCategory Load (0.4ms)[0m  [1mSELECT  "sous_categories".* FROM "sous_categories" WHERE "sous_categories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Command :: file -b --mime '/tmp/f71818613ebf673d036b8dbe9583d11320160629-2512-7qtwm3.pdf'
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "fichiers" ("name", "file_file_name", "file_content_type", "file_file_size", "file_updated_at", "category_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "test"], ["file_file_name", "Textbook-of-Digital-Photography-samples.pdf"], ["file_content_type", "application/pdf"], ["file_file_size", 4699599], ["file_updated_at", "2016-06-29 06:27:42.281178"], ["category_id", 2], ["user_id", 2], ["created_at", "2016-06-29 06:27:42.447066"], ["updated_at", "2016-06-29 06:27:42.447066"]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "fichier_sous_categories" ("sous_category_id", "fichier_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["sous_category_id", 2], ["fichier_id", 7], ["created_at", "2016-06-29 06:27:42.451431"], ["updated_at", "2016-06-29 06:27:42.451431"]]
+  [1m[36m (16.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/fichiers/7
+Completed 302 Found in 302ms (ActiveRecord: 19.7ms)
+
+
+Started GET "/fichiers/7" for 127.0.0.1 at 2016-06-29 08:27:42 +0200
+Processing by FichiersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mFichier Load (0.3ms)[0m  SELECT  "fichiers".* FROM "fichiers" WHERE "fichiers"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mSousCategory Exists (0.1ms)[0m  SELECT  1 AS one FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ? LIMIT 1  [["fichier_id", 7]]
+  [1m[36mSousCategory Load (0.2ms)[0m  [1mSELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?[0m  [["fichier_id", 7]]
+  Rendered sous_categories/_sous_categories_list.html.erb (10.4ms)
+  Rendered fichiers/show.html.erb within layouts/application (29.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 131ms (Views: 128.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/fichiers" for 127.0.0.1 at 2016-06-29 08:27:45 +0200
+Processing by FichiersController#index as HTML
+  [1m[36m (4.4ms)[0m  [1mSELECT COUNT(*) FROM "fichiers"[0m
+  [1m[35mFichier Load (0.2ms)[0m  SELECT  "fichiers".* FROM "fichiers" LIMIT 5 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "fichiers"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSousCategory Exists (3.3ms)[0m  [1mSELECT  1 AS one FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ? LIMIT 1[0m  [["fichier_id", 1]]
+  [1m[35mSousCategory Load (0.2ms)[0m  SELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?  [["fichier_id", 1]]
+  Rendered sous_categories/_sous_categories_list.html.erb (9.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCategory Load (3.4ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSousCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ? LIMIT 1[0m  [["fichier_id", 2]]
+  [1m[35mSousCategory Load (2.4ms)[0m  SELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?  [["fichier_id", 2]]
+  Rendered sous_categories/_sous_categories_list.html.erb (18.1ms)
+  [1m[36mUser Load (4.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSousCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ? LIMIT 1[0m  [["fichier_id", 5]]
+  [1m[35mSousCategory Load (0.2ms)[0m  SELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?  [["fichier_id", 5]]
+  Rendered sous_categories/_sous_categories_list.html.erb (7.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSousCategory Exists (1.9ms)[0m  [1mSELECT  1 AS one FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ? LIMIT 1[0m  [["fichier_id", 6]]
+  [1m[35mSousCategory Load (0.3ms)[0m  SELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?  [["fichier_id", 6]]
+  Rendered sous_categories/_sous_categories_list.html.erb (16.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSousCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ? LIMIT 1[0m  [["fichier_id", 7]]
+  [1m[35mSousCategory Load (0.2ms)[0m  SELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?  [["fichier_id", 7]]
+  Rendered sous_categories/_sous_categories_list.html.erb (6.2ms)
+  Rendered fichiers/index.html.erb within layouts/application (163.1ms)
+Completed 200 OK in 296ms (Views: 273.3ms | ActiveRecord: 21.5ms)
+
+
+Started GET "/fichiers/7/edit" for 127.0.0.1 at 2016-06-29 08:34:49 +0200
+Processing by FichiersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mFichier Load (0.3ms)[0m  [1mSELECT  "fichiers".* FROM "fichiers" WHERE "fichiers"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCategory Load (1.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mSousCategory Load (2.1ms)[0m  [1mSELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?[0m  [["fichier_id", 7]]
+  [1m[35mSousCategory Load (3.7ms)[0m  SELECT "sous_categories".* FROM "sous_categories"
+  Rendered fichiers/_form.html.erb (121.7ms)
+  Rendered fichiers/edit.html.erb within layouts/application (137.4ms)
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 326ms (Views: 262.4ms | ActiveRecord: 14.1ms)
+
+
+Started PATCH "/fichiers/7" for 127.0.0.1 at 2016-06-29 08:35:04 +0200
+Processing by FichiersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PqsU/BRJYnUsQK42OAu3T/7SCT1LxJyk9J24yxFRtfgluo9SRKr3+MSCNH9ZgEKKtUHUYD1/fuJd0eUkP4vb/g==", "fichier"=>{"name"=>"test", "file"=>#<ActionDispatch::Http::UploadedFile:0x000000048bb740 @tempfile=#<Tempfile:/tmp/RackMultipart20160629-2512-14ny1ac.ppt>, @original_filename="Photography-intro-web.ppt", @content_type="application/vnd.ms-powerpoint", @headers="Content-Disposition: form-data; name=\"fichier[file]\"; filename=\"Photography-intro-web.ppt\"\r\nContent-Type: application/vnd.ms-powerpoint\r\n">, "category_id"=>"2", "sous_category_ids"=>["", "2"]}, "commit"=>"Sauvegarder", "id"=>"7"}
+  [1m[35mFichier Load (1.1ms)[0m  SELECT  "fichiers".* FROM "fichiers" WHERE "fichiers"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime '/tmp/106aac619099c9012d94da113ae7b37720160629-2512-16yxkza.ppt'
+  [1m[35mSousCategory Load (0.2ms)[0m  SELECT  "sous_categories".* FROM "sous_categories" WHERE "sous_categories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSousCategory Load (0.1ms)[0m  [1mSELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?[0m  [["fichier_id", 7]]
+Command :: file -b --mime '/tmp/106aac619099c9012d94da113ae7b37720160629-2512-1f58irb.ppt'
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mSousCategory Load (3.4ms)[0m  SELECT "sous_categories".* FROM "sous_categories"
+  Rendered fichiers/_form.html.erb (67.7ms)
+  Rendered fichiers/edit.html.erb within layouts/application (71.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 418ms (Views: 246.2ms | ActiveRecord: 5.5ms)
+
+
+Started PATCH "/fichiers/7" for 127.0.0.1 at 2016-06-29 08:39:36 +0200
+Processing by FichiersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hTxP86zDar4Md/+7Eme2yHZUX/4wa5LlDAsmsAlYuWaeLdRd/CD/M+S1ZfJz7EMNPceCo0bQcKOlR3tfJ4LXYA==", "fichier"=>{"name"=>"test", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f1a5de32938 @tempfile=#<Tempfile:/tmp/RackMultipart20160629-2512-e41eoo.ppt>, @original_filename="Mosimege-plenary-prez.ppt", @content_type="application/vnd.ms-powerpoint", @headers="Content-Disposition: form-data; name=\"fichier[file]\"; filename=\"Mosimege-plenary-prez.ppt\"\r\nContent-Type: application/vnd.ms-powerpoint\r\n">, "category_id"=>"2", "sous_category_ids"=>["", "2"]}, "commit"=>"Sauvegarder", "id"=>"7"}
+  [1m[35mFichier Load (3.6ms)[0m  SELECT  "fichiers".* FROM "fichiers" WHERE "fichiers"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime '/tmp/2c0a581f4c6c2e412378dcb05a71a4df20160629-2512-j2nt4n.ppt'
+  [1m[35mSousCategory Load (0.2ms)[0m  SELECT  "sous_categories".* FROM "sous_categories" WHERE "sous_categories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSousCategory Load (0.1ms)[0m  [1mSELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?[0m  [["fichier_id", 7]]
+Command :: file -b --mime '/tmp/2c0a581f4c6c2e412378dcb05a71a4df20160629-2512-a0gi88.ppt'
+  [1m[35mSQL (7.5ms)[0m  UPDATE "fichiers" SET "file_file_name" = ?, "file_content_type" = ?, "file_file_size" = ?, "file_updated_at" = ?, "updated_at" = ? WHERE "fichiers"."id" = ?  [["file_file_name", "Mosimege-plenary-prez.ppt"], ["file_content_type", "application/vnd.ms-powerpoint"], ["file_file_size", 2885120], ["file_updated_at", "2016-06-29 06:39:36.457739"], ["updated_at", "2016-06-29 06:39:36.511858"], ["id", 7]]
+[paperclip] deleting /home/glados/haaaaa/public/system/fichiers/files/000/000/007/original/Textbook-of-Digital-Photography-samples.pdf
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/fichiers/7
+Completed 302 Found in 192ms (ActiveRecord: 25.5ms)
+
+
+Started GET "/fichiers/7" for 127.0.0.1 at 2016-06-29 08:39:36 +0200
+Processing by FichiersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mFichier Load (0.2ms)[0m  SELECT  "fichiers".* FROM "fichiers" WHERE "fichiers"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mSousCategory Exists (10.3ms)[0m  SELECT  1 AS one FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ? LIMIT 1  [["fichier_id", 7]]
+  [1m[36mSousCategory Load (0.1ms)[0m  [1mSELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?[0m  [["fichier_id", 7]]
+  Rendered sous_categories/_sous_categories_list.html.erb (19.4ms)
+  Rendered fichiers/show.html.erb within layouts/application (28.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 176ms (Views: 159.0ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/fichiers" for 127.0.0.1 at 2016-06-29 08:39:40 +0200
+Processing by FichiersController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "fichiers"[0m
+  [1m[35mFichier Load (2.9ms)[0m  SELECT  "fichiers".* FROM "fichiers" LIMIT 5 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "fichiers"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSousCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ? LIMIT 1[0m  [["fichier_id", 1]]
+  [1m[35mSousCategory Load (0.1ms)[0m  SELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?  [["fichier_id", 1]]
+  Rendered sous_categories/_sous_categories_list.html.erb (5.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCategory Load (4.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSousCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ? LIMIT 1[0m  [["fichier_id", 2]]
+  [1m[35mSousCategory Load (0.1ms)[0m  SELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?  [["fichier_id", 2]]
+  Rendered sous_categories/_sous_categories_list.html.erb (7.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSousCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ? LIMIT 1[0m  [["fichier_id", 5]]
+  [1m[35mSousCategory Load (0.1ms)[0m  SELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?  [["fichier_id", 5]]
+  Rendered sous_categories/_sous_categories_list.html.erb (11.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSousCategory Exists (4.9ms)[0m  [1mSELECT  1 AS one FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ? LIMIT 1[0m  [["fichier_id", 6]]
+  [1m[35mSousCategory Load (0.1ms)[0m  SELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?  [["fichier_id", 6]]
+  Rendered sous_categories/_sous_categories_list.html.erb (13.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSousCategory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ? LIMIT 1[0m  [["fichier_id", 7]]
+  [1m[35mSousCategory Load (0.1ms)[0m  SELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?  [["fichier_id", 7]]
+  Rendered sous_categories/_sous_categories_list.html.erb (7.2ms)
+  Rendered fichiers/index.html.erb within layouts/application (169.2ms)
+Completed 200 OK in 270ms (Views: 255.2ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/fichiers/7/edit" for 127.0.0.1 at 2016-06-29 08:46:07 +0200
+Processing by FichiersController#edit as HTML
+  Parameters: {"id"=>"7"}
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.6ms)
+
+NoMethodError (undefined method `_file_post_process_callbacks' for #<Class:0x007f1a4caca630>):
+  app/models/fichier.rb:33:in `<class:Fichier>'
+  app/models/fichier.rb:1:in `<top (required)>'
+  app/controllers/fichiers_controller.rb:68:in `set_fichier'
+
+
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (49.9ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (119.5ms)
+
+
+Started GET "/fichiers/7/edit" for 127.0.0.1 at 2016-06-29 08:46:08 +0200
+Processing by FichiersController#edit as HTML
+  Parameters: {"id"=>"7"}
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `_file_post_process_callbacks' for #<Class:0x007f1a4d3868a0>):
+  app/models/fichier.rb:33:in `<class:Fichier>'
+  app/models/fichier.rb:1:in `<top (required)>'
+  app/controllers/fichiers_controller.rb:68:in `set_fichier'
+
+
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.4ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.0ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.0ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (67.1ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.1ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (114.0ms)
+
+
+Started GET "/fichiers/7/edit" for 127.0.0.1 at 2016-06-29 08:47:15 +0200
+Processing by FichiersController#edit as HTML
+  Parameters: {"id"=>"7"}
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 4.4ms)
+
+NoMethodError (undefined method `_file_post_process_callbacks' for #<Class:0x007f1a64649f58>):
+  app/models/fichier.rb:34:in `<class:Fichier>'
+  app/models/fichier.rb:1:in `<top (required)>'
+  app/controllers/fichiers_controller.rb:68:in `set_fichier'
+
+
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (20.4ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.7ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.1ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.2ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.9ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/glados/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (114.7ms)
+
+
+Started GET "/fichiers/7/edit" for 127.0.0.1 at 2016-06-29 08:47:55 +0200
+Processing by FichiersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mFichier Load (0.2ms)[0m  [1mSELECT  "fichiers".* FROM "fichiers" WHERE "fichiers"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCategory Load (0.9ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mSousCategory Load (0.3ms)[0m  [1mSELECT "sous_categories".* FROM "sous_categories" INNER JOIN "fichier_sous_categories" ON "sous_categories"."id" = "fichier_sous_categories"."sous_category_id" WHERE "fichier_sous_categories"."fichier_id" = ?[0m  [["fichier_id", 7]]
+  [1m[35mSousCategory Load (1.4ms)[0m  SELECT "sous_categories".* FROM "sous_categories"
+  Rendered fichiers/_form.html.erb (108.4ms)
+  Rendered fichiers/edit.html.erb within layouts/application (115.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 338ms (Views: 279.5ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/assets/application.self-caf566d9eccf3b72bbf68376e40e41e77fff15f2a7e39e980819cc8ba0b324ae.css?body=1" for 127.0.0.1 at 2016-06-29 08:47:56 +0200
+
+
+Started GET "/assets/haaa.self-c905bbf2cafb7c0036946af7df5d6537053489bbb0417bfccc4399b469026094.css?body=1" for 127.0.0.1 at 2016-06-29 08:47:56 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-06-29 08:47:56 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-06-29 08:47:56 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-06-29 08:47:56 +0200
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-06-29 08:47:56 +0200
+
+
+Started GET "/assets/fichiers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-06-29 08:47:56 +0200
+
+
+Started GET "/assets/roles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-06-29 08:47:56 +0200
+
+
+Started GET "/assets/sous_categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-06-29 08:47:56 +0200
+
+
+Started GET "/assets/utilisateurs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-06-29 08:47:56 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-06-29 08:47:56 +0200
