@@ -22,7 +22,6 @@ class FichiersController < ApplicationController
   end
 
   # POST /fichiers
-  # POST /fichiers.json
   def create
     #@fichier = Fichier.new(fichier_params)
     @fichier = current_user.fichiers.build(fichier_params)
@@ -30,35 +29,28 @@ class FichiersController < ApplicationController
     respond_to do |format|
       if @fichier.save
         format.html { redirect_to @fichier, notice: 'Fichier was successfully created.' }
-        format.json { render :show, status: :created, location: @fichier }
       else
         format.html { render :new }
-        format.json { render json: @fichier.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # PATCH/PUT /fichiers/1
-  # PATCH/PUT /fichiers/1.json
   def update
     respond_to do |format|
       if @fichier.update(fichier_params)
         format.html { redirect_to @fichier, notice: 'Fichier was successfully updated.' }
-        format.json { render :show, status: :ok, location: @fichier }
       else
         format.html { render :edit }
-        format.json { render json: @fichier.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # DELETE /fichiers/1
-  # DELETE /fichiers/1.json
   def destroy
     @fichier.destroy
     respond_to do |format|
       format.html { redirect_to fichiers_url, notice: 'Fichier was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 
