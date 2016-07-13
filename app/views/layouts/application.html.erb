@@ -4,7 +4,7 @@
  <meta charset="utf-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Haaaaa - Votre gestionnaire de fichiers</title>
+  <title>Haaaaa - <%= t('yourFilesManager') %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 'haaa.css', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -30,11 +30,11 @@
                 <div id="navbar" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav navbar-right">
 					<% if user_signed_in? %>
-						Connecté en tant que <%= current_user.email %> 
-						<li><%= link_to 'Editer mon compte', edit_user_registration_path %><span> &nbsp  </span></li>
-						<li><%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %></li>
+						<%= t('loggedInAs') %> <%= current_user.email %> 
+						<li><%= link_to t('editMyAccount'), edit_user_registration_path %><span> &nbsp  </span></li>
+						<li><%= link_to t('logout'), destroy_user_session_path, method: :delete %></li>
 					<% else %>
-						<li><%= link_to 'Se connecter', new_user_session_path%></li>
+						<li><%= link_to t('login'), new_user_session_path%></li>
 					<% end %>
                   </ul>
                 </div>
@@ -47,11 +47,11 @@
         <div class="row">
             <div class="col-sm-3 col-md-2 sidebar">
               <ul class="nav nav-sidebar">
-				<li><!--<%= link_to 'Liste des Roles', roles_path, class: ''  %> --></li>
-				<li><%= link_to "Liste des utilisateurs", users_path %></li>
-				<li><%= link_to 'Liste des Categories', categories_path, class: ''  %></li>
-				<li><%= link_to 'Liste des Sous-Categories', sous_categories_path, class: ''  %></li>
-				<li><%= link_to 'Liste des Fichiers', fichiers_path, class: ''  %></li>
+				<li><!--<%= link_to t('rolesList'), roles_path, class: ''  %> --></li>
+				<li><%= link_to t('usersList'), users_path %></li>
+				<li><%= link_to t('categoriesList'), categories_path, class: ''  %></li>
+				<li><%= link_to t('subCategoriesList'), sous_categories_path, class: ''  %></li>
+				<li><%= link_to t('filesList'), fichiers_path, class: ''  %></li>
               </ul>
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="overflow-y: auto;">

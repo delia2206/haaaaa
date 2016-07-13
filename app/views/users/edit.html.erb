@@ -2,7 +2,7 @@
 <%= simple_form_for @user do |f| %>
   <div class="row">
     <div class="col-lg-5">
-    <h1>Role Utilisateur</h1>
+    <h1><%= t('userRole') %></h1>
       
       <div class="form-group ">
           <div class="col-lg-8"><span><%= @user.email %> &nbsp </span><%= f.collection_select(:role, User::ROLES, :to_s, lambda{|i| i.to_s.humanize}) %></div>
