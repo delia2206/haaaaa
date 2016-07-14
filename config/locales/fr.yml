@@ -47,6 +47,7 @@ fr:
   loggedInAs: "Connecté en tant que"
   login: "Se connecter"
   logout: "Se déconnecter"
+  name: "Nom"
   newCategory: "Nouvelle catégorie"
   newFile: "Nouveau fichier"
   newRole: "Nouveau rôle"
@@ -73,3 +74,13 @@ fr:
   youHaveNoRoles: "Vous n'avez aucun roles !"
   youHaveNoSubCategories: "Vous n'avez aucune Sous-Categories !"
   youHaveNoUsers: "Vous n'avez aucun Utilisateurs !"
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "Email obligatoire"
+            password:
+              blank: "Mot de passe obligatoire"

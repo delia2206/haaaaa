@@ -47,6 +47,7 @@ en:
   loggedInAs: "Logged in as"
   login: "Login"
   logout: "Logout"
+  name: "Name"
   newCategory: "New category"
   newFile: "New file"
   newRole: "New role"
@@ -73,3 +74,13 @@ en:
   youHaveNoRoles: "You have no roles!"
   youHaveNoSubCategories: "You have no sub-categories!"
   youHaveNoUsers: "You have no users!"
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "Email required"
+            password:
+              blank: "Password required"
