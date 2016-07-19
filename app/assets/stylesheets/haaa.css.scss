@@ -48,7 +48,13 @@ body {
 .sidebar {
   display: none;
 }
+
+@media (max-width: 768px) {
+  
+}
+
 @media (min-width: 768px) {
+
   .sidebar {
     position: fixed;
     top: 51px;
@@ -91,8 +97,9 @@ body {
 }
 @media (min-width: 768px) {
   .main {
-    padding-right: 40px;
-    padding-left: 40px;
+    padding-top: 250px!important;
+    padding-right: 40px!important;
+    padding-left: 40px!important;
   }
 }
 .main .page-header {
@@ -132,17 +139,25 @@ html, body{
 
 .logo{
   background: #ed463c;
-  padding-left: 109px;
+  padding-left: 20px;
   margin-left: -1px; /* Super important */
 }
 
 .logo a{
   color: #FFF;
   font-size: 22px;
+  text-align: center;
 }
 
 .menu{
   background: #FFF;
+  height: 50px;
+}
+
+.menu > li {
+  max-height: 50px;
+  list-style: none;
+  float: left;
 }
 
 .sidebar{
@@ -157,4 +172,25 @@ html, body{
 
 .nav-sidebar > li > a{
   color: rgba(255, 255, 255, 0.5);
+}
+
+input[type="submit"]{
+  margin: 15px 0px;
+  width: auto;
+}
+
+label{
+  display: block;
+}
+
+input{
+  display: block;
+  width: 250px;
+}
+
+.input{
+    margin: 0px 0px 15px;
+}
+select[multiple], select{
+  width: 250px;
 }
